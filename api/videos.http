@@ -1,0 +1,39 @@
+//this file creates with extention rest clien, let us test our request like postman
+@api = http://localhost:5000
+// get all videos
+GET {{api}}/products
+// ### let us separete our request.
+###
+
+// gets a single video
+GET {{api}}/videos/5fb799e3c9c09a37f49a4d02
+
+###
+//create a vdieo
+POST {{api}}/products
+Content-Type: application/json
+
+{
+    "name": "chochox",
+    "description": "dasd ads",
+    "brand": "Kron",
+    "image": "ath",
+    "price": 1,
+    "countInStock": 2
+}
+
+###
+// deletes a video
+DELETE {{api}}/videos/60434078eec675131c956b38
+
+###
+
+PUT {{api}}/products/6046a54d5b594df0a1a708bb
+// we need content type app/json to send the actual data in the { }
+Content-Type: application/json
+
+{
+    "name": "Coco"
+}
+
+
